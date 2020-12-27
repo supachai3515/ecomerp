@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tplaner/when": "^2.1"
+    }
+}
