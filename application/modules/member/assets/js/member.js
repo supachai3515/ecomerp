@@ -1,6 +1,7 @@
 NProgress.start();
 $(document).ready(function() {
     NProgress.done();
+    var base_url = $("#base_url").val();
     var startDate = moment().startOf('years');
     var endDate = moment();
     $("#date_search").val(moment(startDate).format("DD/MM/YYYY") + ' - ' + moment(endDate).format("DD/MM/YYYY"));
@@ -119,8 +120,8 @@ $(document).ready(function() {
 
     function col_action(data) {
         var str = "";
-        str = str + ' <button  type="button" data-url="/member/edit/?id=' + data.id + '"  class="btn btn-sm btn-outline-warning action_click"><i class="far fa-edit"></i></button>';
-        str = str + ' <button  type="button" data-url="/member/view/?id=' + data.id + '"  class="btn btn-sm btn-outline-info action_click"><i class="fas fa-search"></i></button>';
+        str = str + ' <button  type="button" data-url="'+base_url+'member/edit/?id=' + data.id + '"  class="btn btn-sm btn-outline-warning action_click"><i class="far fa-edit"></i></button>';
+        str = str + ' <button  type="button" data-url="'+base_url+'member/view/?id=' + data.id + '"  class="btn btn-sm btn-outline-info action_click"><i class="fas fa-search"></i></button>';
         return str;
     }
     // initialize the datatables

@@ -98,19 +98,4 @@
             <?php endif; ?>
             </div>
     </div>
-    <script rel="javascript" type="text/javascript">
-        $(document).ready(function() {
-            $("#partial_form").validate({
-                submitHandler: function(form) {
-                    $(form).Submit();
-                }
-            });
-            $("#partial_form").on("submit", function() {
-                var el = $(this).find(':input[type=submit]');
-                el.prop('disabled', true);
-                setTimeout(function() {
-                    el.prop('disabled', false);
-                }, 2000);
-            });
-        });
-    </script>
+</div>
